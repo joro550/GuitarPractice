@@ -56,7 +56,8 @@ namespace GuitarPractice.Web
                 endpoints.MapBlazorHub();
                 endpoints.MapFallbackToPage("/_Host");
             });
-
+            
+            // Open the Electron-Window here
             Task.Run(async () => await Electron.WindowManager.CreateWindowAsync());
         }
     }
